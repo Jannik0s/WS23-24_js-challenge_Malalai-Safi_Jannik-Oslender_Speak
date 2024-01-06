@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Speak</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Learn languages with Speak</h1>
+    </header>
+    <main>
+        <h2>Sign up for a Speak-account</h2>
+        <form action="/signUp" id="signUp" novalidate="novalidate">
+            <section id="email">
+                <div><label for="email">Email</label></div>
+                <div><input type="email" name="email" required></div>
+                <div class="explainer">
+                    <span id="hasUsername">Characters in front of @ missing. </span>
+                    <span id="hasAt">@ sign missing. </span>
+                    <span id="hasDomain">Domain after @ missing. </span>
+                </div>
+            </section>
+            <section id="username">
+                <div><label for="username">Username</label></div>
+                <div><input type="text" name="username" required></div>
+                <div class="explainer">
+                    <span id="hasUpperStart">Start with a capital letter. </span>
+                    <span id="hasNoSpecial">Special characters are not allowed. </span>
+                </div>
+            </section>
+            <section id="password">
+                <div><label for="password">Password</label></div>
+                <div><input type="password" name="password" required></div>
+                <div class="explainer">
+                    <span id="hasMin">Minimum 10 characters. </span>
+                    <span id="hasUpper">Uppercase letter missing. </span>
+                    <span id="hasLower">Lowercase letter missing. </span>
+                    <span id="hasNum">Number missing. </span>
+                    <span id="allValid">This is a great password.</span>
+                </div>
+            </section>
+            <section>
+                <button disabled>Create account</button>
+            </section>
+        </form>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
